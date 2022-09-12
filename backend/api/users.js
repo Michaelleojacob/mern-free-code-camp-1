@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/user');
-console.log(User);
 
 router.get('/', (req, res) => {
   User.find()
@@ -15,10 +14,8 @@ router.post('/', (req, res, next) => {
     username: req.body.username,
     email: req.body.email,
   });
-  console.log(newUser);
   newUser.save((err) => {
     if (err) {
-      console.log(err);
       return next(err);
     }
   });

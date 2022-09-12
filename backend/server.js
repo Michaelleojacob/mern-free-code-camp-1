@@ -10,7 +10,6 @@ app.use(cors());
 
 // API
 const userRouter = require('./api/users');
-console.log(userRouter);
 app.use('/api/users', userRouter);
 
 app.use(express.static(path.join(__dirname, '../build')));

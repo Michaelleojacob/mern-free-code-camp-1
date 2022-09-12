@@ -10,7 +10,6 @@ const App = function () {
     axios
       .get('/api/users')
       .then((users) => {
-        console.log(users.data);
         setUsers(users.data);
       })
       .catch((err) => console.log(err));
