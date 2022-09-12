@@ -1,5 +1,6 @@
 {
   "name": "freecodecamp",
+  "homepage": "https://gitname.github.io/Michaelleojacob/mern-free-code-camp-1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "node backend/server",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -43,6 +46,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.19"
   }
 }
